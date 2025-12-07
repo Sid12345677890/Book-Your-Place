@@ -1,0 +1,21 @@
+nav{
+    display: flex;
+ 
+}
+.title{
+    height: 100px;
+    width: 100px;
+    margin-top:-27px;
+    padding-left:120px;
+    
+}
+.Navs{
+    display: flex;
+    margin-left: 40%;
+    margin-right: 10px;
+}
+.Navitems{
+    list-style: none;
+    padding-right:100px;
+ 
+}
