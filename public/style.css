@@ -1,21 +1,342 @@
-nav{
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* GLOBAL */
+body {
+    background: #fefefe;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* -----------------------------------------------------
+   NAVBAR
+----------------------------------------------------- */
+.navbar {
     display: flex;
- 
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: white;
+    border-bottom: 1.8px solid rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.title{
-    height: 100px;
-    width: 100px;
-    margin-top:-27px;
-    padding-left:120px;
-    
+
+.title {
+    height: 55px;
+    max-height: 55px;
+    width: auto;
+    transform: scale(1.8);
+    transform-origin: left center;
 }
-.Navs{
-    display: flex;
-    margin-left: 40%;
-    margin-right: 10px;
-}
-.Navitems{
+
+/* NAV ITEMS */
+.Navs {
     list-style: none;
-    padding-right:100px;
- 
+    display: flex;
+    gap: 45px;
+}
+
+.Navitems {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.Navitems:hover {
+    color: #0b67e2;
+}
+
+.Navitems::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #0b67e2;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+}
+
+.Navitems:hover::after {
+    width: 100%;
+}
+
+/* LOGIN BUTTON */
+.loginButton {
+    padding: 10px 22px;
+    background: #0b67e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.loginButton:hover {
+    background: #004cb2;
+    transform: translateY(-2px);
+}
+
+/* HAMBURGER */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------
+   HERO SECTION
+----------------------------------------------------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 60px;
+    background: linear-gradient(to bottom right, #f1f5ff, #e8ecff);
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1b1b1b;
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    padding: 14px 30px;
+    background: #0b67e2;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.explore-btn:hover {
+    background: #004cb2;
+    transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
+.hero-img img {
+    width: 520px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.hero-img img:hover {
+    transform: scale(1.03);
+}
+
+/* -----------------------------------------------------
+   FEATURES SECTION
+----------------------------------------------------- */
+.features {
+    text-align: center;
+    padding: 80px 40px;
+    background: #fff;
+}
+
+.features h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.feature-card {
+    background: #f8faff;
+    padding: 28px;
+    width: 300px;
+    border-radius: 14px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
+}
+
+/* -----------------------------------------------------
+   HOW IT WORKS
+----------------------------------------------------- */
+.how-it-works {
+    text-align: center;
+    padding: 80px 40px;
+    background: #eef3ff;
+}
+
+.how-it-works h2 {
+    font-size: 34px;
+    margin-bottom: 45px;
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background: #ffffff;
+    width: 280px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 22px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.step-card i {
+    font-size: 45px;
+    color: #0b67e2;
+    margin-bottom: 18px;
+}
+
+.step-card:hover {
+    transform: translateY(-7px);
+}
+
+/* -----------------------------------------------------
+   ABOUT SECTION
+----------------------------------------------------- */
+.about-section {
+    background: #f8faff;
+    padding: 70px 80px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    max-width: 850px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.social-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+    color: #0b67e2;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #004cb2;
+    transform: scale(1.2);
+}
+
+/* -----------------------------------------------------
+   RESPONSIVE
+----------------------------------------------------- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 30px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .menu-icon {
+        display: block;
+    }
+
+    .Navs {
+        position: absolute;
+        top: 82px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #fff;
+        display: none;
+        padding: 25px 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .Navs.active {
+        display: flex;
+    }
+
+    .loginButton {
+        display: none;
+    }
+
+    .title {
+        transform: scale(1.3);
+    }
+
+    .about-section,
+    .how-it-works,
+    .features {
+        padding: 60px 20px;
+    }
 }

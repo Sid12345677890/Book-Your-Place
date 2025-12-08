@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Place | Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <img class="title" src="/images/logo.png" alt="logo">
+
+        <div class="menu-icon" id="menuIcon">☰</div>
+
+        <ul class="Navs" id="navLinks">
+            <li class="Navitems">Home</li>
+            <li class="Navitems">List a place</li>
+            <li class="Navitems">Book a place</li>
+            <li class="Navitems">About</li>
+        </ul>
+
+        <button class="loginButton">Login/Sign Up</button>
+    </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Find Your Perfect Stay</h1>
+        <p>
+            Experience seamless room booking with Book Your Place. Browse premium stays,
+            modern rooms, and curated accommodations designed for comfort and relaxation.
+        </p>
+
+        <button class="explore-btn">Explore Rooms</button>
+    </div>
+
+    <div class="hero-img">
+        <img src="/images/HomePage.webp" alt="homepage">
+    </div>
+</section>
+
+<!-- ================= FEATURES SECTION ================= -->
+<section class="features">
+
+    <h2>Why Choose Book Your Place?</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>Secure Booking</h3>
+            <p>Your information stays encrypted and safe throughout the booking process.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Premium Stays</h3>
+            <p>Carefully selected hotels and rooms to give you comfort & value.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Instant Confirmation</h3>
+            <p>No delays. Your booking is confirmed the moment you click.</p>
+        </div>
+
+    </div>
+
+    <section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <div class="steps-grid">
+        <div class="step-card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Search</h3>
+            <p>Find rooms in your preferred location with ease.</p>
+        </div>
+
+        <div class="step-card">
+            <i class="fa-solid fa-hotel"></i>
+            <h3>Select</h3>
+            <p>Choose from verified listings and premium stays.</p>
+        </div>
+
+        <div class="step-card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Book</h3>
+            <p>Make secure bookings instantly with one click.</p>
+        </div>
+    </div>
+</section>
+
+</section>
+<section class="about-section">
+    <h2>About Book Your Place</h2>
+    <p>
+        Book Your Place is designed to make finding your ideal stay simple, fast, and stress-free.
+        Whether you're planning a weekend getaway, a business trip, or a long vacation,
+        we connect you with comfortable, affordable, and premium-quality rooms across multiple locations.
+    </p>
+
+    <p>
+        Our mission is to help you discover the perfect place to stay — with secure booking,
+        transparent pricing, and smooth navigation. With a curated selection of rooms
+        and verified listings, we aim to bring comfort and trust to every journey.
+    </p>
+
+    <p>
+        From modern hotels to cozy stays, Book Your Place ensures a seamless experience
+        from browsing to booking. Your comfort, your choice — Book Your Place.
+    </p>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2025 Book Your Place — All rights reserved.</p>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/__sidh.ant__/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sidhant-chauhan-395682226" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+
+
+<script>
+    const menuIcon = document.getElementById('menuIcon');
+    const navLinks = document.getElementById('navLinks');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
