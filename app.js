@@ -26,6 +26,10 @@ async function main(){
 }
 main();
 app.get("/",(req,res)=>{
-res.render("listings/index.ejs");
+res.render("home/index.ejs");
 })
 
+app.get("/book",async (req,res)=>{
+    let data= await listing.find();
+    res.render("listings/listings.ejs",{data});
+})

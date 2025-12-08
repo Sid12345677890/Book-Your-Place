@@ -40,7 +40,7 @@ body {
 .Navs {
     list-style: none;
     display: flex;
-    gap: 45px;
+    gap: 60px;
 }
 
 .Navitems {
@@ -339,4 +339,8 @@ footer {
     .features {
         padding: 60px 20px;
     }
+}
+
+a{
+    text-decoration: none !important;
 }
