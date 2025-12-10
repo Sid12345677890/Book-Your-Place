@@ -33,8 +33,8 @@ const ListingSchema=mongoose.Schema({
     },
     image:{
         type:String,
-        default:"https://www.nsnhotels.com/post/top-10-best-hotel-booking-websites-in-india-135",
-       set:(v)=>v==="" ? "https://www.nsnhotels.com/post/top-10-best-hotel-booking-websites-in-india-135":v,  
+        default:"https://d27s5h82rwvc4v.cloudfront.net/uploads/63e0ae31497191675669041.jpg",
+       set:(v)=>v==="" ? "https://d27s5h82rwvc4v.cloudfront.net/uploads/63e0ae31497191675669041.jpg":v,  
     }
 })
 const listing=mongoose.model("listing",ListingSchema);

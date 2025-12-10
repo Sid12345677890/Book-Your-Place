@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=data.title%></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/styleShow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+ <header>
+    <nav class="navbar">
+        <img class="title" src="/images/logo.png" alt="logo">
+
+        <div class="menu-icon" id="menuIcon">☰</div>
+
+        <ul class="Navs" id="navLinks">
+           <a href="http://localhost:3000"> <li class="Navitems">Home</li></a>
+            <li class="Navitems">List a place</li>
+            <a href="http://localhost:3000/book"><li class="Navitems">Book a place</li></a>
+            <li class="Navitems">About</li>
+        </ul>
+
+        <button class="loginButton">Login/Sign Up</button>
+    </nav>
+</header>
+<body>
+   <div class="hotel-container">
+
+    <div class="hotel-image-box">
+        <img class="hotel-image" src="<%= data.image %>" alt="Hotel Image">
+    </div>
+
+    <div class="hotel-details">
+        <h1 class="hotel-title"><%= data.title %></h1>
+
+        <div class="info-box">
+            <h3>Price:</h3>
+            <p class="price">₹ <%= data.price.toLocaleString("en-IN") %></p>
+        </div>
+
+        <div class="info-box">
+            <h3>Location:</h3>
+            <p><%= data.location %></p>
+        </div>
+
+        <div class="info-box">
+            <h3>Country:</h3>
+            <p><%= data.country %></p>
+        </div>
+
+        <div class="info-box">
+            <h3>Description:</h3>
+            <p class="desc"><%= data.description %></p>
+        </div>
+        <a href="/confirm-booking/<%= data._id %>" class="book-btn">Book Now</a>
+
+    </div>
+
+</div>
+
+    <footer>
+    <p>© 2025 Book Your Place — All rights reserved.</p>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/__sidh.ant__/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sidhant-chauhan-395682226" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
