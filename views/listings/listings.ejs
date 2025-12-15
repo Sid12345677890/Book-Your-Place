@@ -9,22 +9,7 @@
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-    <nav class="navbar">
-        <img class="title" src="/images/logo.png" alt="logo">
-
-        <div class="menu-icon" id="menuIcon">☰</div>
-
-        <ul class="Navs" id="navLinks">
-           <a href="http://localhost:3000"> <li class="Navitems">Home</li></a>
-            <li class="Navitems">List a place</li>
-            <a href="http://localhost:3000/book"><li class="Navitems">Book a place</li></a>
-            <li class="Navitems">About</li>
-        </ul>
-
-        <button class="loginButton">Login/Sign Up</button>
-    </nav>
-</header>
+   <%- include("../partials/navbar")%>
   <div class="card-container">
     <% for(let d of data) { %>
         <div class="card" >
@@ -36,19 +21,7 @@
         </div>
     <% } %>
 </div>
-<footer>
-    <p>© 2025 Book Your Place — All rights reserved.</p>
-
-    <div class="social-links">
-        <a href="https://www.instagram.com/__sidh.ant__/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/sidhant-chauhan-395682226" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-    </div>
-</footer>
+<%- include("../partials/footer")%>
 
 
 </body>

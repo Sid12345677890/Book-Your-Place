@@ -11,7 +11,7 @@ const ListingSchema=mongoose.Schema({
         type:String,
         required:true,
         minlength:5,
-        maxlength:500
+        maxlength:5000
     },
     price:{
         type:Number,

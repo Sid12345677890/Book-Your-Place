@@ -75,3 +75,106 @@ footer {
         grid-template-columns: 1fr;    /* 1 card per row on mobile */
     }
 }
+
+/* Form container */
+.hotel-form {
+    width: 480px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-family: 'Inter', sans-serif;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Label styling */
+.hotel-form label {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* Inputs and textarea modern style */
+.hotel-form input,
+.hotel-form textarea {
+    padding: 14px 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    background: #f8f9fc;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+}
+
+/* Focus effect */
+.hotel-form input:focus,
+.hotel-form textarea:focus {
+    background: #ffffff;
+    border-color: #6c63ff;
+    box-shadow: 0 0 12px rgba(108, 99, 255, 0.2);
+}
+
+/* Textarea sizing */
+.hotel-form textarea {
+    height: 130px;
+    resize: vertical;
+    border-radius: 12px;
+}
+
+/* Submit button modern style */
+.submit-btn {
+    background: linear-gradient(135deg, #6c63ff, #5a54e4);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #584ef2, #4740d6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(90, 84, 228, 0.3);
+}
+
+/* Form responsive */
+@media (max-width: 600px) {
+    .hotel-form {
+        width: 90%;
+        padding: 25px;
+    }
+}
+.List-button{
+    margin-left: 40%;
+    text-align: center;
+    width:4.5rem;
+    background-color: #479bf4;
+    color:white;
+    padding: 10px 10px;
+    border-radius:1rem;
+    border: white;
+}
+
+.List-button:hover{
+    background-color: #1a79df;
+}
+.List-button:active{
+    transform: translateY(-3px);
+    box-shadow:0px 2px 13px 2px #8d7373;
+}
+

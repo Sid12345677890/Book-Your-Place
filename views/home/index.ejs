@@ -12,22 +12,8 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<header>
-    <nav class="navbar">
-        <img class="title" src="/images/logo.png" alt="logo">
+<%- include("../partials/navbar") %>
 
-        <div class="menu-icon" id="menuIcon">☰</div>
-
-        <ul class="Navs" id="navLinks">
-            <li class="Navitems">Home</li>
-           <a href="http://localhost:3000/listplace"> <li class="Navitems">List a place</li></a>
-            <a href="http://localhost:3000/book"><li class="Navitems">Book a place</li></a>
-            <li class="Navitems">About</li>
-        </ul>
-
-        <button class="loginButton">Login/Sign Up</button>
-    </nav>
-</header>
 
 <!-- ================= HERO SECTION ================= -->
 <section class="hero">
@@ -125,20 +111,7 @@
 
 
 <!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2025 Book Your Place — All rights reserved.</p>
-
-    <div class="social-links">
-        <a href="https://www.instagram.com/__sidh.ant__/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/sidhant-chauhan-395682226" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-    </div>
-</footer>
-
+<%- include("../partials/footer")%>
 
 
 <script>

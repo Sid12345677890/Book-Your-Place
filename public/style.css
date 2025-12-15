@@ -6,27 +6,33 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 /* GLOBAL */
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: #fefefe;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: visible !important;
 }
 
 /* -----------------------------------------------------
    NAVBAR
 ----------------------------------------------------- */
 .navbar {
+     position: sticky !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
     background: white;
     border-bottom: 1.8px solid rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
+    top: 0 !important;
     z-index: 1000;
 }
+
 
 .title {
     height: 55px;

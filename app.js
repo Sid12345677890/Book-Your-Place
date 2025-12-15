@@ -36,5 +36,14 @@ app.get("/book/:id",async(req,res)=>{
      res.render("listings/show.ejs",{data});
 })
 
+app.get("/list",(req,res)=>{
+   res.render("listings/listform.ejs")
+}
+)
 
+app.post("/list",async(req,res)=>{
+  await listing.create(req.body);
+  res.redirect("/book");
+}
+);
  
