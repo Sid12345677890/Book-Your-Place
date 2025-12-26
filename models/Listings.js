@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const ListingSchema=mongoose.Schema({
     title:{
@@ -35,7 +35,13 @@ const ListingSchema=mongoose.Schema({
         type:String,
         default:"https://d27s5h82rwvc4v.cloudfront.net/uploads/63e0ae31497191675669041.jpg",
        set:(v)=>v==="" ? "https://d27s5h82rwvc4v.cloudfront.net/uploads/63e0ae31497191675669041.jpg":v,  
-    }
+    },
+    reviews:[
+        {
+            type:Schema.Types.ObjectId,
+            ref: "Review"
+        }
+    ]
 })
 const listing=mongoose.model("listing",ListingSchema);
 export default listing;

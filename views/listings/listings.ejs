@@ -17,6 +17,7 @@
             <img class="card-image" src="<%= d.image %>" alt="Image">
             <h3 class="card-title"><%= d.title %></h3>
             <h4 class="card-price">₹ <%= d.price.toLocaleString("en-IN") %></h4>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> <%= d.location %></p>
             </a>
         </div>
     <% } %>

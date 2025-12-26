@@ -4,6 +4,8 @@ import path from "path";
 import ejs from "ejs";
 import listing from "./models/Listings.js";
 import { fileURLToPath } from "url";
+import {Review} from "./models/Reviews.js";
+import { reviewSchema } from "./models/Joi.js";
 const app=express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,6 +24,16 @@ async function main(){
    await mongoose.connect("mongodb://127.0.0.1:27017/BookYourRoom");
 }
 main();
+
+const validateSchema=(req,res,next)=>{
+const {error}=reviewSchema.validate(req.body);
+if(erorr){
+  return res.status(400).send(error.message);
+}
+next();
+}
+
+
 app.get("/",(req,res)=>{
 res.render("home/index.ejs");
 })
@@ -46,4 +58,25 @@ app.post("/list",async(req,res)=>{
   res.redirect("/book");
 }
 );
+app.post("/book/:id/reviews",validateSchema,async(req,res)=>{
+let{id}=req.params;
+let listing1=await listing.findById(`${id}`);
+console.log(req.body.review);
+ let review1=new Review(req.body.review);
+ listing1.reviews.push(review1._id);
+ await review1.save();
+ await listing1.save();
+ res.redirect(`/book/${id}`);
+})
+
+app.use((req, res, next) => {
+  const err = new Error("Page not found");
+  err.status =404;
+  next(err);
+});
+
+app.use((err,req,res,next)=>{ 
+    res.status(err.status).send(err.message);
+   
+})
  
